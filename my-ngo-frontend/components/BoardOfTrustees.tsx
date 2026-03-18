@@ -1,9 +1,45 @@
-import ClientImage from "@/components/ClientImage";
+"use client";
+
+import { useEffect, useState } from "react";
+import { getBoardMembers, type StrapiBoardMember } from "@/api/boardMembers";
+import { getStrapiImageUrl } from "@/api/strapi";
 import type { BoardData } from "@/lib/types";
-import { resolveImageUrl } from "@/lib/api";
 import defaults from "@/lib/defaults";
 
-export default function BoardOfTrustees({ data = defaults.board }: { data?: BoardData }) {
+export default function BoardOfTrustees({
+  data = defaults.board,
+}: {
+  data?: BoardData;
+}) {
+  const [members, setMembers] = useState<StrapiBoardMember[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getBoardMembers().then((data) => {
+      setMembers(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const usingFallback = !loading && members.length === 0;
+
+  /* Build a unified display list from whichever source is active */
+  const displayMembers = usingFallback
+    ? data.members.map((m, i) => ({
+        id: i,
+        name: m.name,
+        role: m.role,
+        bio: undefined as string | undefined,
+        imgSrc: m.image,
+      }))
+    : members.map((m) => ({
+        id: m.id,
+        name: m.name,
+        role: m.role,
+        bio: m.bio,
+        imgSrc: getStrapiImageUrl(m.image?.url),
+      }));
+
   return (
     <section id="board" className="bg-off-white py-24 px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">
@@ -21,37 +57,59 @@ export default function BoardOfTrustees({ data = defaults.board }: { data?: Boar
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-0.5 bg-navy">
-          {data.members.map((member, i) => {
-            const imgSrc = resolveImageUrl(member.image);
-            const initials = member.name
-              .split(" ")
-              .filter((w) => w.length > 1)
-              .map((w) => w[0])
-              .join("")
-              .slice(0, 2);
-            const fallback = `https://placehold.co/160x160/0d2a6e/ffffff?text=${initials}`;
-            return (
-              <div key={i} className="bg-off-white flex flex-col items-center text-center p-6">
-                <div className="w-20 h-20 bg-navy overflow-hidden mb-4">
-                  <ClientImage
-                    src={imgSrc}
-                    alt={member.name}
-                    fallback={fallback}
-                    className="w-full h-full object-cover"
-                  />
+        {/* Loading skeletons */}
+        {loading && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-0.5 bg-navy">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="bg-off-white h-48 loading-shimmer" />
+            ))}
+          </div>
+        )}
+
+        {/* Member grid */}
+        {!loading && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-0.5 bg-navy">
+            {displayMembers.map((member) => {
+              const initials = member.name
+                .split(" ")
+                .filter((w) => w.length > 1)
+                .map((w) => w[0])
+                .join("")
+                .slice(0, 2);
+              const fallback = `https://placehold.co/160x160/0d2a6e/ffffff?text=${initials}`;
+
+              return (
+                <div
+                  key={member.id}
+                  className="bg-off-white flex flex-col items-center text-center p-6 group"
+                >
+                  <div className="w-20 h-20 bg-navy overflow-hidden mb-4">
+                    <img
+                      src={member.imgSrc || fallback}
+                      alt={member.name}
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = fallback;
+                      }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="w-6 h-px bg-orange mb-3" />
+                  <p className="text-navy font-black text-xs uppercase tracking-wide leading-tight">
+                    {member.name}
+                  </p>
+                  <p className="text-orange text-xs font-bold uppercase tracking-widest mt-1">
+                    {member.role}
+                  </p>
+                  {member.bio && (
+                    <p className="text-slate-muted text-[10px] leading-relaxed mt-2 hidden group-hover:block">
+                      {member.bio}
+                    </p>
+                  )}
                 </div>
-                <div className="w-6 h-px bg-orange mb-3" />
-                <p className="text-navy font-black text-xs uppercase tracking-wide leading-tight">
-                  {member.name}
-                </p>
-                <p className="text-orange text-xs font-bold uppercase tracking-widest mt-1">
-                  {member.role}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        )}
 
       </div>
     </section>

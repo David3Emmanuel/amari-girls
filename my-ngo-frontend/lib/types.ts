@@ -151,6 +151,39 @@ export interface FooterData {
   registrationNote: string;
 }
 
+// ── Programs section (homepage teaser) ──────────────────────────────────────
+export interface ProgramsData {
+  sectionLabel: string;
+  sectionTitle: string;
+}
+
+// ── Events section ───────────────────────────────────────────────────────────
+export interface EventsData {
+  sectionLabel: string;
+  sectionTitle: string;
+}
+
+// ── Transparency section ─────────────────────────────────────────────────────
+export interface TransparencyData {
+  sectionLabel: string;
+  sectionTitle: string;
+}
+
+// ── DonateCTA section ────────────────────────────────────────────────────────
+export interface DonateCTAData {
+  sectionLabel: string;
+  sectionTitle: string;
+  donateHref: string;
+}
+
+// ── VolunteerCTA section ─────────────────────────────────────────────────────
+export interface VolunteerCTAData {
+  heading: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref: string;
+}
+
 // ── Full site payload ───────────────────────────────────────────────────────
 export interface SiteContent {
   navbar: NavbarData;

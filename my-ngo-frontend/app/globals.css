@@ -174,3 +174,51 @@ body {
 .anim-pulsate {
   animation: pulsate-fwd 1.6s ease-in-out infinite;
 }
+
+/* =============================================
+   NEW — Blueprint animations
+   ============================================= */
+
+/* Loading skeleton shimmer */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    #e8e8e8 25%,
+    #f5f5f5 50%,
+    #e8e8e8 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Spinner (used on program detail loading) */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll margin for fixed navbar offset on anchor links */
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+/* Reduced motion accessibility override */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #0d2a6e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #f97316; }
