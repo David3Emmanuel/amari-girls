@@ -45,10 +45,10 @@ export interface NewsletterError {
 
 export async function createNewsletter(email: string): Promise<void> {
   const res = await fetch(`${STRAPI_BASE_URL}/api/newsletters`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email }),
-  });
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ data: { email } }),
+  })
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
     const msg: string = body?.error?.message ?? "";
