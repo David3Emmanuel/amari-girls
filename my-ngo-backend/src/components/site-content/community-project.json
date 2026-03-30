@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_site_content_community_projects",
+    "info": {
+        "displayName": "Community Project",
+        "icon": "pinMap"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "paragraphs": {
+            "type": "component",
+            "component": "site-content.text-item",
+            "repeatable": true
+        },
+        "quote": {
+            "type": "text"
+        },
+        "quoteAuthor": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

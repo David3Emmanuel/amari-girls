@@ -1,0 +1,41 @@
+{
+    "collectionName": "components_site_content_contacts",
+    "info": {
+        "displayName": "Contact",
+        "icon": "mail"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "bank": {
+            "type": "component",
+            "component": "site-content.contact-bank",
+            "repeatable": false
+        },
+        "donateNote": {
+            "type": "text"
+        },
+        "phones": {
+            "type": "component",
+            "component": "site-content.text-item",
+            "repeatable": true
+        },
+        "email": {
+            "type": "email"
+        },
+        "location": {
+            "type": "string"
+        },
+        "socials": {
+            "type": "component",
+            "component": "site-content.text-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

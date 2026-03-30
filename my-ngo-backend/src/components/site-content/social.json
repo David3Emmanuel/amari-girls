@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_site_content_socials",
+  "info": {
+    "displayName": "Social",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

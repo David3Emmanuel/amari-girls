@@ -785,6 +785,54 @@ export interface ApiReportReport extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSiteContentSiteContent extends Struct.SingleTypeSchema {
+  collectionName: 'site_contents';
+  info: {
+    displayName: 'Site Content';
+    pluralName: 'site-contents';
+    singularName: 'site-content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    board: Schema.Attribute.Component<'site-content.board', false>;
+    communityProject: Schema.Attribute.Component<
+      'site-content.community-project',
+      false
+    >;
+    contact: Schema.Attribute.Component<'site-content.contact', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'site-content.footer', false>;
+    founder: Schema.Attribute.Component<'site-content.founder', false>;
+    gallery: Schema.Attribute.Component<'site-content.gallery', false>;
+    hero: Schema.Attribute.Component<'site-content.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::site-content.site-content'
+    > &
+      Schema.Attribute.Private;
+    missionVision: Schema.Attribute.Component<
+      'site-content.mission-vision',
+      false
+    >;
+    navbar: Schema.Attribute.Component<'site-content.navigation-bar', false>;
+    objectives: Schema.Attribute.Component<'site-content.objectives', false>;
+    partner: Schema.Attribute.Component<'site-content.partner', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonials: Schema.Attribute.Component<
+      'site-content.testimonials',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
   collectionName: 'site_settings';
   info: {
@@ -1551,6 +1599,7 @@ declare module '@strapi/strapi' {
       'api::partner.partner': ApiPartnerPartner;
       'api::program.program': ApiProgramProgram;
       'api::report.report': ApiReportReport;
+      'api::site-content.site-content': ApiSiteContentSiteContent;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'api::story-impact.story-impact': ApiStoryImpactStoryImpact;
       'api::tag.tag': ApiTagTag;

@@ -1,0 +1,27 @@
+{
+    "collectionName": "components_site_content_partner_options",
+    "info": {
+        "displayName": "Partner Option",
+        "icon": "handHeart"
+    },
+    "options": {},
+    "attributes": {
+        "num": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "cta": {
+            "type": "string"
+        },
+        "accent": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "config": {}
+}

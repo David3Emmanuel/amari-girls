@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_site_content_partners",
+    "info": {
+        "displayName": "Partner",
+        "icon": "gift"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "options": {
+            "type": "component",
+            "component": "site-content.partner-option",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

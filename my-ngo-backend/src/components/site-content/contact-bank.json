@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_site_content_contact_banks",
+    "info": {
+        "displayName": "Contact Bank",
+        "icon": "creditCard"
+    },
+    "options": {},
+    "attributes": {
+        "bankName": {
+            "type": "string"
+        },
+        "accountName": {
+            "type": "string"
+        },
+        "accountNumber": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_contents",
+  "info": {
+    "singularName": "site-content",
+    "pluralName": "site-contents",
+    "displayName": "Site Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navbar": {
+      "type": "component",
+      "component": "site-content.navigation-bar",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "site-content.hero",
+      "repeatable": false
+    },
+    "founder": {
+      "type": "component",
+      "component": "site-content.founder",
+      "repeatable": false
+    },
+    "missionVision": {
+      "type": "component",
+      "component": "site-content.mission-vision",
+      "repeatable": false
+    },
+    "objectives": {
+      "type": "component",
+      "component": "site-content.objectives",
+      "repeatable": false
+    },
+    "communityProject": {
+      "type": "component",
+      "component": "site-content.community-project",
+      "repeatable": false
+    },
+    "gallery": {
+      "type": "component",
+      "component": "site-content.gallery",
+      "repeatable": false
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "site-content.testimonials",
+      "repeatable": false
+    },
+    "partner": {
+      "type": "component",
+      "component": "site-content.partner",
+      "repeatable": false
+    },
+    "board": {
+      "type": "component",
+      "component": "site-content.board",
+      "repeatable": false
+    },
+    "contact": {
+      "type": "component",
+      "component": "site-content.contact",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "site-content.footer",
+      "repeatable": false
+    }
+  }
+}

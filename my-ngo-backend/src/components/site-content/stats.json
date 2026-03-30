@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_site_content_stats",
+  "info": {
+    "displayName": "Stats",
+    "icon": "slideshow"
+  },
+  "options": {},
+  "attributes": {
+    "num": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

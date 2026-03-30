@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_site_content_text_items",
+    "info": {
+        "displayName": "Text Item",
+        "icon": "paragraph"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "text",
+            "required": true
+        }
+    },
+    "config": {}
+}

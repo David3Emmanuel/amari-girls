@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_site_content_cta_buttons",
+  "info": {
+    "displayName": "CTA Button",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "required": true,
+      "default": "primary",
+      "enum": [
+        "primary",
+        "outline"
+      ]
+    }
+  },
+  "config": {}
+}

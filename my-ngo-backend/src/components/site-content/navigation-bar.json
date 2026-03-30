@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_site_content_navigation_bars",
+  "info": {
+    "displayName": "Navigation Bar",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "site-content.navigation-link",
+      "repeatable": true
+    },
+    "logoText": {
+      "type": "string",
+      "required": false
+    },
+    "orgName": {
+      "type": "string",
+      "required": false
+    },
+    "donateLabel": {
+      "type": "string",
+      "required": false
+    },
+    "donateHref": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

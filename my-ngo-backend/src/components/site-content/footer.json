@@ -1,0 +1,43 @@
+{
+    "collectionName": "components_site_content_footers",
+    "info": {
+        "displayName": "Footer",
+        "icon": "layout"
+    },
+    "options": {},
+    "attributes": {
+        "logoText": {
+            "type": "string"
+        },
+        "orgNameLine1": {
+            "type": "string"
+        },
+        "orgNameLine2": {
+            "type": "string"
+        },
+        "brandDescription": {
+            "type": "text"
+        },
+        "links": {
+            "type": "component",
+            "component": "site-content.footer-link",
+            "repeatable": true
+        },
+        "phone": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
+        },
+        "location": {
+            "type": "string"
+        },
+        "copyrightOrg": {
+            "type": "string"
+        },
+        "registrationNote": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

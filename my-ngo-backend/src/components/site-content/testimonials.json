@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_site_content_testimonials",
+    "info": {
+        "displayName": "Testimonials",
+        "icon": "feather"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "featuredQuote": {
+            "type": "text"
+        },
+        "featuredAuthor": {
+            "type": "string"
+        },
+        "featuredRole": {
+            "type": "string"
+        },
+        "items": {
+            "type": "component",
+            "component": "site-content.testimonial-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

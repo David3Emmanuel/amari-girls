@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_site_content_navigation_links",
+  "info": {
+    "displayName": "Navigation Link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

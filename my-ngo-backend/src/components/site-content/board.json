@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_site_content_boards",
+    "info": {
+        "displayName": "Board",
+        "icon": "users"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "members": {
+            "type": "component",
+            "component": "site-content.board-member",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

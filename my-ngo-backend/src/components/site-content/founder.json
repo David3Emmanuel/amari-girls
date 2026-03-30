@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_site_content_founders",
+    "info": {
+        "displayName": "Founder",
+        "icon": "user"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "role": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "bio": {
+            "type": "component",
+            "component": "site-content.text-item",
+            "repeatable": true
+        },
+        "noteLabel": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

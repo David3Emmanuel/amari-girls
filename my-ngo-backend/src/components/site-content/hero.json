@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_site_content_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "headingLine1": {
+      "type": "string"
+    },
+    "headingLine2": {
+      "type": "string"
+    },
+    "headingLine3Desktop": {
+      "type": "string"
+    },
+    "headingLine3Mobile": {
+      "type": "string"
+    },
+    "headingLine4": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "ctaButtons": {
+      "type": "component",
+      "component": "site-content.cta-button",
+      "repeatable": true
+    },
+    "socials": {
+      "type": "component",
+      "component": "site-content.social",
+      "repeatable": true
+    },
+    "stats": {
+      "type": "component",
+      "component": "site-content.stats",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

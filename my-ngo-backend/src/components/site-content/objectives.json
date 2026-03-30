@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_site_content_objectives",
+    "info": {
+        "displayName": "Objectives",
+        "icon": "check"
+    },
+    "options": {},
+    "attributes": {
+        "sectionLabel": {
+            "type": "string"
+        },
+        "sectionTitle": {
+            "type": "string"
+        },
+        "items": {
+            "type": "component",
+            "component": "site-content.text-item",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}
