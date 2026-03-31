@@ -43,10 +43,11 @@ const SOCIAL_CONFIG = [
 ];
 
 export default function SupportContact({
-  data = defaults.contact,
+  data,
 }: {
   data?: ContactData;
 }) {
+  data = { ...defaults.contact, ...data } satisfies ContactData;
   const [settings, setSettings] = useState<StrapiSiteSettings | null>(null);
   const [loading, setLoading] = useState(true);
 

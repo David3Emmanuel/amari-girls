@@ -31,10 +31,11 @@ interface DisplayOption {
 }
 
 export default function PartnerWithUs({
-  data = defaults.partner,
+  data,
 }: {
   data?: PartnerData;
 }) {
+  data = { ...defaults.partner, ...data } satisfies PartnerData;
   const [strapiOptions, setStrapiOptions] = useState<StrapiPartnerOption[]>([]);
   const [loading, setLoading] = useState(true);
 

@@ -3,7 +3,8 @@ import type { FounderData } from "@/lib/types";
 import { resolveImageUrl } from "@/lib/api";
 import defaults from "@/lib/defaults";
 
-export default function FounderNote({ data = defaults.founder }: { data?: FounderData }) {
+export default function FounderNote({ data }: { data?: FounderData }) {
+  data = { ...defaults.founder, ...data } satisfies FounderData;
   const imgSrc = resolveImageUrl(data.image);
 
   return (

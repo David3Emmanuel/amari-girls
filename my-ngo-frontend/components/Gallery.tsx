@@ -14,10 +14,11 @@ import defaults from "@/lib/defaults";
    Photos themselves are NOT exposed here.
    ────────────────────────────────────────────────────────────────────────── */
 export default function Gallery({
-  data = defaults.gallery,
+  data,
 }: {
   data?: GalleryData;
 }) {
+  data = { ...defaults.gallery, ...data } satisfies GalleryData;
   const [items, setItems] = useState<StrapiGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
 

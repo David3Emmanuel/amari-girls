@@ -1,7 +1,8 @@
 import type { MissionVisionData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 
-export default function MissionVision({ data = defaults.missionVision }: { data?: MissionVisionData }) {
+export default function MissionVision({ data }: { data?: MissionVisionData }) {
+  data = { ...defaults.missionVision, ...data } satisfies MissionVisionData;
   return (
     <section id="mission" className="bg-navy py-24 px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">
