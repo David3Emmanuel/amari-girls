@@ -7,8 +7,8 @@ import { Moon, Sun } from "lucide-react";
 import type { NavbarData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 
-export default function Navbar({ data }: { data?: NavbarData }) {
-  data = { ...defaults.navbar, ...data } satisfies NavbarData;
+export default function Navbar({ data: _data }: { data?: Partial<NavbarData> }) {
+  const data = { ...defaults.navbar, ..._data } satisfies NavbarData;
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);

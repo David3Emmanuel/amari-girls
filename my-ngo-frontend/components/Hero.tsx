@@ -2,9 +2,9 @@ import type { HeroData } from "@/lib/types";
 import { resolveImageUrl } from "@/lib/api";
 import defaults from "@/lib/defaults";
 
-export default function Hero({ data }: { data?: Partial<HeroData> }) {
+export default function Hero({ data: _data }: { data?: Partial<HeroData> }) {
 
-  data = { ...defaults.hero, ...data } satisfies HeroData;
+  const data = { ...defaults.hero, ..._data } satisfies HeroData;
   data.headingLine3Desktop = {...defaults.hero.headingLine3Desktop, ...data.headingLine3Desktop };
   data.headingLine3Mobile = { ...defaults.hero.headingLine3Mobile, ...data.headingLine3Mobile };
   data.ctaButtons = data.ctaButtons || defaults.hero.ctaButtons;

@@ -74,11 +74,11 @@ function StaticCard({
 
 /* ── Main component ─────────────────────────────────────────────────────── */
 export default function Testimonials({
-  data,
+  data: _data,
 }: {
-  data?: TestimonialsData;
+  data?: Partial<TestimonialsData>;
 }) {
-  data = { ...defaults.testimonials, ...data } satisfies TestimonialsData;
+  const data = { ...defaults.testimonials, ..._data } satisfies TestimonialsData;
   const [strapiItems, setStrapiItems] = useState<StrapiTestimonial[]>([]);
   const [loading, setLoading] = useState(true);
 

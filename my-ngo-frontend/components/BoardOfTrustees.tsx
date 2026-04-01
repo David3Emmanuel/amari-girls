@@ -7,11 +7,11 @@ import type { BoardData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 
 export default function BoardOfTrustees({
-  data,
+  data: _data,
 }: {
-  data?: BoardData;
+  data?: Partial<BoardData>;
 }) {
-  data = { ...defaults.board, ...data } satisfies BoardData;
+  const data = { ...defaults.board, ..._data } satisfies BoardData;
   const [members, setMembers] = useState<StrapiBoardMember[]>([]);
   const [loading, setLoading] = useState(true);
 

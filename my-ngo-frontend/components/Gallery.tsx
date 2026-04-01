@@ -13,12 +13,8 @@ import defaults from "@/lib/defaults";
    button that leads to /gallery — the full event-organised gallery page.
    Photos themselves are NOT exposed here.
    ────────────────────────────────────────────────────────────────────────── */
-export default function Gallery({
-  data,
-}: {
-  data?: GalleryData;
-}) {
-  data = { ...defaults.gallery, ...data } satisfies GalleryData;
+export default function Gallery({data: _data}: {data?: Partial<GalleryData>}) {
+  const data = { ...defaults.gallery, ..._data } satisfies GalleryData;
   const [items, setItems] = useState<StrapiGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
 

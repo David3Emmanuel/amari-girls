@@ -4,9 +4,9 @@
    section is missing from the response.
    ────────────────────────────────────────────────────────────────────────── */
 
-import type { SiteContent } from "./types";
+import type { FullSiteContent } from "./types";
 
-const defaults: SiteContent = {
+const defaults: FullSiteContent = {
   /* ── Navbar ──────────────────────────────────────────────────────────── */
   navbar: {
     links: [

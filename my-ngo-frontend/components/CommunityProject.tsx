@@ -3,8 +3,8 @@ import type { CommunityProjectData } from "@/lib/types";
 import { resolveImageUrl } from "@/lib/api";
 import defaults from "@/lib/defaults";
 
-export default function CommunityProject({ data }: { data?: CommunityProjectData }) {
-  data = { ...defaults.communityProject, ...data } satisfies CommunityProjectData;
+export default function CommunityProject({ data: _data }: { data?: Partial<CommunityProjectData> }) {
+  const data = { ...defaults.communityProject, ..._data } satisfies CommunityProjectData;
   const imgSrc = resolveImageUrl(data.image);
 
   return (

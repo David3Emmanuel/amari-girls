@@ -199,3 +199,18 @@ export interface SiteContent {
   contact: Partial<ContactData>;
   footer: Partial<FooterData>;
 }
+
+export interface FullSiteContent {
+  navbar: NavbarData;
+  hero: HeroData;
+  founder: FounderData;
+  missionVision: MissionVisionData;
+  objectives: ObjectivesData;
+  communityProject: CommunityProjectData;
+  gallery: GalleryData;
+  testimonials: TestimonialsData;
+  partner: PartnerData;
+  board: BoardData;
+  contact: ContactData;
+  footer: FooterData;
+}

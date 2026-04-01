@@ -1,8 +1,8 @@
 import type { ObjectivesData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 
-export default function Objectives({ data }: { data?: ObjectivesData }) {
-  data = { ...defaults.objectives, ...data } satisfies ObjectivesData;
+export default function Objectives({ data: _data }: { data?: Partial<ObjectivesData> }) {
+  const data = { ...defaults.objectives, ..._data } satisfies ObjectivesData;
   return (
     <section className="bg-off-white py-24 px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">

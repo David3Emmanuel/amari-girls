@@ -36,8 +36,8 @@ function YouTubeIcon() {
   );
 }
 
-export default function Footer({ data }: { data?: FooterData }) {
-  data = { ...defaults.footer, ...data } satisfies FooterData;
+export default function Footer({ data: _data }: { data?: Partial<FooterData> }) {
+  const data = { ...defaults.footer, ..._data } satisfies FooterData;
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
