@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, Mail, Phone, MapPin, CheckCircle } from "lucide-react";
-import { submitContactForm } from "@/api/submissions";
-import { getSiteSettings, type StrapiSiteSettings } from "@/api/siteSettings";
+import { submitContactForm } from "@/data/submissions";
+import { getSiteSettings, type StrapiSiteSettings } from "@/data/siteSettings";
 import defaults from "@/lib/defaults";
 
 export default function ContactPage() {

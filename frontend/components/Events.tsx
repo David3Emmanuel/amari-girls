@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Calendar, MapPin, Users } from "lucide-react";
-import { getAllEvents, getEventStatus, type StrapiEvent } from "@/api/events";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getAllEvents, getEventStatus, type StrapiEvent } from "@/data/events";
+import { getStrapiImageUrl } from "@/data/strapi";
 
 const STATUS_STYLES: Record<string, string> = {
   Upcoming: "bg-orange text-white",

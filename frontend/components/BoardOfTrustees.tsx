@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getBoardMembers, type StrapiBoardMember } from "@/api/boardMembers";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getBoardMembers, type StrapiBoardMember } from "@/data/boardMembers";
+import { getStrapiImageUrl } from "@/data/strapi";
 import type { BoardData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 

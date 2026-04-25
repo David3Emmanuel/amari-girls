@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { FooterData } from "@/lib/types";
 import defaults from "@/lib/defaults";
-import { createNewsletter, type NewsletterError } from "@/api/submissions";
+import { createNewsletter, type NewsletterError } from "@/data/submissions";
 
 /* ── Inline SVG social icons ──────────────────────────────────────────────── */
 function TwitterIcon() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getSiteSettings, type StrapiSiteSettings } from "@/api/siteSettings";
+import { getSiteSettings, type StrapiSiteSettings } from "@/data/siteSettings";
 import type { ContactData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 

@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BookOpen, Users, Star } from "lucide-react";
-import { getAllPrograms, type StrapiProgram } from "@/api/programs";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getAllPrograms, type StrapiProgram } from "@/data/programs";
+import { getStrapiImageUrl } from "@/data/strapi";
 
 const ICONS = [BookOpen, Users, Star];
 

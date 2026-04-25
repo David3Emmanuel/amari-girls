@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getTestimonials, type StrapiTestimonial } from "@/api/testimonials";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getTestimonials, type StrapiTestimonial } from "@/data/testimonials";
+import { getStrapiImageUrl } from "@/data/strapi";
 import type { TestimonialsData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 

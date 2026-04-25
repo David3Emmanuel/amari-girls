@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Shield, FileText, CheckCircle, ExternalLink } from "lucide-react";
-import { getAllReports, type StrapiReport } from "@/api/reports";
-import { getAllOrgPartners, type StrapiOrgPartner } from "@/api/partners";
-import { getStrapiImageUrl, STRAPI_BASE_URL } from "@/api/strapi";
+import { getAllReports, type StrapiReport } from "@/data/reports";
+import { getAllOrgPartners, type StrapiOrgPartner } from "@/data/partners";
+import { getStrapiImageUrl, STRAPI_BASE_URL } from "@/data/strapi";
 
 const PARTNER_BADGE: Record<string, string> = {
   Government: "bg-navy text-white",

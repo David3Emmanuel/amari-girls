@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Images, ArrowRight } from "lucide-react";
-import { getGalleryItems, type StrapiGalleryItem } from "@/api/gallery";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getGalleryItems, type StrapiGalleryItem } from "@/data/gallery";
+import { getStrapiImageUrl } from "@/data/strapi";
 import type { GalleryData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 

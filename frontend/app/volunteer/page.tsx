@@ -15,8 +15,8 @@ import {
   ChevronDown,
   CheckCircle,
 } from "lucide-react";
-import { getVolunteerRoles, parseTasks, type StrapiVolunteerRole, type RoleIconSlug } from "@/api/volunteerRoles";
-import { submitVolunteerApplication } from "@/api/submissions";
+import { getVolunteerRoles, parseTasks, type StrapiVolunteerRole, type RoleIconSlug } from "@/data/volunteerRoles";
+import { submitVolunteerApplication } from "@/data/submissions";
 
 /* ── Icon map: slug → lucide component ─────────────────────────────────── */
 const ICON_MAP: Record<RoleIconSlug, React.ComponentType<{ className?: string }>> = {

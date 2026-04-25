@@ -3,8 +3,8 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Images, Calendar } from "lucide-react";
-import { getGalleryItems, type StrapiGalleryItem } from "@/api/gallery";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getGalleryItems, type StrapiGalleryItem } from "@/data/gallery";
+import { getStrapiImageUrl } from "@/data/strapi";
 
 /* ──────────────────────────────────────────────────────────────────────────
    Group shape

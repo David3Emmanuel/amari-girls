@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 import Link from "next/link";
 import { ArrowLeft, Heart } from "lucide-react";
-import { getLiveCampaigns, type StrapiCampaign } from "@/api/campaigns";
-import { getStrapiImageUrl } from "@/api/strapi";
+import { getLiveCampaigns, type StrapiCampaign } from "@/data/campaigns";
+import { getStrapiImageUrl } from "@/data/strapi";
 
 /* Paystack global type */
 declare global {

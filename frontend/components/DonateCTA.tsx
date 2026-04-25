@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Heart, RefreshCw, Calendar, Gift } from "lucide-react";
-import { getSiteSettings, type StrapiSiteSettings } from "@/api/siteSettings";
+import { getSiteSettings, type StrapiSiteSettings } from "@/data/siteSettings";
 import defaults from "@/lib/defaults";
 
 const DONATION_OPTIONS = [

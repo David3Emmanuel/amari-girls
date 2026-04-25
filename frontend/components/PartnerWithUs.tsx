@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getPartnerOptions, type StrapiPartnerOption } from "@/api/partnerOptions";
+import { getPartnerOptions, type StrapiPartnerOption } from "@/data/partnerOptions";
 import type { PartnerData } from "@/lib/types";
 import defaults from "@/lib/defaults";
 
